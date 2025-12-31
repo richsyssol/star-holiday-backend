@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class CustomerFeedback extends Model
+{
+    use HasFactory;
+
+    protected $table = 'customer_feedbacks';
+    
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'feedback',
+        'rating'
+    ];
+    
+    protected $casts = [
+        'rating' => 'integer',
+    ];
+}
